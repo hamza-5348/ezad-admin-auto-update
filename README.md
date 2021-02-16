@@ -2,7 +2,13 @@
 
 A Quasar Framework app
 
-## Install the dependencies
+## Install the quasar framework if not already installed
+```bash
+yarn global add @quasar/cli
+# or
+npm install -g @quasar/cli
+```
+## Install the dependencies in project root directory
 ```bash
 yarn install
 ```
