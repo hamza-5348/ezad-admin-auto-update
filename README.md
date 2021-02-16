@@ -4,12 +4,17 @@ A Quasar Framework app
 
 ## Install the dependencies
 ```bash
-yarn
+yarn install
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev
+```
+
+### Start the app as desktop application
+```bash
+quasar dev -m electron
 ```
 
 ### Lint the files
