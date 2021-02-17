@@ -1,6 +1,6 @@
 <template>
   <div class="q-ma-xs">
-    <q-btn dense flat rounded color="primary" :label="title" :icon="icon" :to="route">
+    <q-btn dense flat rounded color="secondary" :label="title" :icon="icon" exa :to="route">
 
       <q-tooltip content-class="bg-primary">{{title}}</q-tooltip>
 

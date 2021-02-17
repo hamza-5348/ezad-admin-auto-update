@@ -1,21 +1,22 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout>
+    <q-header>
       <q-toolbar class="text-black">
         <q-img
           :src="icon"
-          style="max-width: 110px"
-          spinner-color="white"
-        >
+          style="max-width: 110px">
         </q-img>
-
-        <div class="full-width row justify-center items-center content-center rounded-borders" style="overflow-x: auto">
-          <NavBarItem v-for="navItem in topNavItems" :key="navItem.id" :title="navItem.title" :route="navItem.path"
-                      :icon="navItem.icon"/>
-        </div>
-
-        <div class="q-ml-auto">Quasar v{{ $q.version }}</div>
+        <span class="full-width row justify-center items-center content-center rounded-borders">
+          <NavigationMenu/>
+        </span>
+        <q-toggle
+          class="text-primary-color"
+          v-model="isDark"
+          @input="updateDarkMode"
+          color="accent"
+        />
       </q-toolbar>
+
     </q-header>
 
 
@@ -27,23 +28,26 @@
 
 <script>
 
-import NavBarItem from "components/NavBarItem";
+import NavigationMenu from "components/NavigationMenu";
 
 export default {
   name: 'MainLayout',
-  components: {NavBarItem},
+  components: {NavigationMenu},
   data() {
     return {
       icon: require("../assets/ez-nav-logo.png"),
-      topNavItems: [
-        {id: "1", title: "Dashboard", path: "/dashboard", icon: "home"},
-        {id: "2", title: "Emails", path: "/dashboard/emails", icon: "email"},
-        {id: "3", title: "Entities", path: "", icon: "perm_identity"},
-        {id: "4", title: "Calls", path: "", icon: "settings_phone"},
-        {id: "5", title: "Reminders", path: "", icon: "notification_important"},
-        {id: "6", title: "Tags", path: "", icon: "military_tech"},
-      ]
+      isDark: false
     }
+  },
+  methods: {
+    updateDarkMode(value) {
+      this.$q.dark.set(value)
+    }
+  }
+  , mounted() {
   }
 }
 </script>
+<style lang="scss" scoped>
+
+</style>

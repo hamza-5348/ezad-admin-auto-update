@@ -18,7 +18,7 @@ const hideAppLoader = (ctx) => {
 const showAppNotification = (ctx) => {
 
   ctx.$q.notify({
-    color: '$primary',
+    color: 'accent',
     textColor: 'white',
     icon: 'cloud_done',
     message: 'Logged In Successfully'

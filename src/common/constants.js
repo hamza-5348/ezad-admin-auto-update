@@ -3,7 +3,7 @@ export default {
 
 
   ROUTES:{
-    dashboard:"/dashboard"
+    dashboard:"/home"
   }
 
 }

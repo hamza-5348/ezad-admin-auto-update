@@ -28,8 +28,8 @@
               class="q-gutter-md"
             >
               <q-input
-                filled
                 v-model="email"
+                color="accent"
                 label="Enter Your Email"
                 type="email"
                 lazy-rules
@@ -37,7 +37,7 @@
               />
 
               <q-input
-                filled
+                color="accent"
                 type="password"
                 v-model="password"
                 label="Enter Your Password"
